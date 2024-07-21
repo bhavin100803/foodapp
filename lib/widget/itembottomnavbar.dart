@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:foodapp/cartpage.dart';
 
 class itembottomnavbar extends StatelessWidget {
   const itembottomnavbar({super.key});
@@ -32,7 +33,9 @@ class itembottomnavbar extends StatelessWidget {
               ],
             ),
             ElevatedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>cartPage() ));
+                },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.red),
                   padding: MaterialStateProperty.all(

@@ -36,6 +36,9 @@ class Drawerwidget extends StatelessWidget {
               color: Colors.red,
             ),
             title: Text("Home",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+            onTap: (){
+
+            },
           ),
           ListTile(
             leading: Icon(

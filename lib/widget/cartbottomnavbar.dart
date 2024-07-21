@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:foodapp/homepage.dart';
+import 'package:foodapp/itempage.dart';
+import 'package:foodapp/widget/order_complate.dart';
+import 'package:foodapp/widget/popular_item.dart';
 
 class cartbottomnavbar extends StatelessWidget {
   const cartbottomnavbar({super.key});
@@ -32,7 +36,10 @@ class cartbottomnavbar extends StatelessWidget {
               ],
             ),
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ordercomplate()));
+                  print("congratulation!");
+                },
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.red),
                     padding: MaterialStateProperty.all(
@@ -42,7 +49,8 @@ class cartbottomnavbar extends StatelessWidget {
                     RoundedRectangleBorder(borderRadius: BorderRadius.circular(20),)
                   ),
                 ),
-                child: Text("Order Now",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),))
+                child: Text("Order Now",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.white),),
+            )
           ],
         ),
       ),
